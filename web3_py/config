@@ -1,10 +1,10 @@
 [network]
-URL = http://127.0.0.1:9545
+URL = http://127.0.0.1:8545
 chain_id = 1337
 
 [address]
-my_address = ADDR
-private_key = PVT_KEY
+my_address = 0xad443bfd510a450e20d17d874fdff3c4d187f74d
+private_key = 0xb5b17461682593eb2ad8022e4cd75bf5d88d822aeecc2d9ff1c74d014ae540cd
 
 [solidity]
 version = 0.8.7

@@ -7,9 +7,9 @@ import configparser
 with open("./CandyShop.sol", "r") as file:
     candy_shop_file = file.read()
 
-# Get config parameters
+# Get config.js parameters
 config = configparser.ConfigParser()
-config.read('config')
+config.read('config.js')
 
 print("Installing solc version...")
 install_solc(config['solidity']['version'])
@@ -41,9 +41,9 @@ abi = json.loads(
     compiled_sol["contracts"]["CandyShop.sol"]["CandyShop"]["metadata"]
 )["output"]["abi"]
 
-# Parameters handled through config file
+# Parameters handled through config.js file
 # To deploy to a different network change these values
-# in config file
+# in config.js file
 w3 = Web3(Web3.HTTPProvider(config['network']['URL']))
 chain_id = config.getint('network', 'chain_id')
 my_address = Web3.toChecksumAddress(config['address']['my_address'])
