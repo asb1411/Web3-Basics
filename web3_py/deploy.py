@@ -9,7 +9,7 @@ with open("./CandyShop.sol", "r") as file:
 
 # Get config.js parameters
 config = configparser.ConfigParser()
-config.read('config.js')
+config.read('config')
 
 print("Installing solc version...")
 install_solc(config['solidity']['version'])
